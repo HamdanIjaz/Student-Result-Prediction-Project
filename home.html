@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+      <div style="width: 450px; margin: auto">
+           <div class="container" style="text-align: center; border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;">
+      <br><br>
+      <h1 class="header center orange-text">Student Result Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Failing or passing in exams
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="gender"><b>Gender</b></label>
+            <br>
+          <input placeholder="Enter 1 or 0.." name="Gender" id="gender" type="number" class="validate" required>
+        </div>
+        <div class="input-field col s4">
+
+          <label for="race"><b>Race </b></label>
+            <br>
+          <input id="race" name="Race" placeholder="Enter 1 - 5.."  type="text" class="validate" required>
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="education"><b>Parental Education Level</b></label>
+            <br>
+          <input id="education" name="Educational_Level" placeholder="Enter 1 - 6.." type="text" class="validate"  required>
+
+        </div>
+ <div class="input-field col s4">
+
+          <label for="preparation"><b>Preparation of Exams </b></label>
+            <br>
+          <input id="preparation" name="exam" placeholder="1 - 0.."  type="text" class="validate" required>
+
+        </div> <div class="input-field col s4">
+
+          <label for="math"><b>Math Scores</b></label>
+            <br>
+          <input id="math" name="Math" placeholder="Math scores here.."  type="text" class="validate" required>
+
+        </div> <div class="input-field col s4">
+
+          <label for="reading"><b>Reading Scores </b></label>
+            <br>
+          <input id="reading" name="Reading" placeholder="Reading scores here.."  type="text" class="validate" required>
+
+        </div> <div class="input-field col s4">
+
+          <label for="writing"><b>Writing Scores </b></label>
+            <br>
+          <input id="writing" name="Writing" placeholder="Writing Scores here.."  type="text" class="validate" required>
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>{{pred}}<br>
+
+    </div>
+      </div>
+
+  </div>
+
+<img src="/static/images/1.jpg">
+<img src="/static/images/2.jpg">
+
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+  </body>
+</html>
